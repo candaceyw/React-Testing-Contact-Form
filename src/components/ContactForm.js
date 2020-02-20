@@ -14,41 +14,43 @@ const ContactForm = () => {
     <div className="App">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <label htmlFor="firstName">First Name*</label>
+          <label >First Name*
           <input
             name="firstName"
-            placeholder="bill"
+            placeholder="First Name"
             ref={register({ required: true, maxLength: 3 })}
           />
           {errors.firstName && (
             <p>Looks like there was an error: {errors.firstName.type}</p>
           )}
+          </label>
         </div>
 
         <div>
-          <label htmlFor="lastName">Last Name*</label>
+          <label>Last Name*
           <input
             name="lastName"
-            placeholder="luo"
+            placeholder="Last Name"
             ref={register({ required: true })}
           />
           {errors.lastName && (
             <p>Looks like there was an error: {errors.lastName.type}</p>
           )}
+          </label>
         </div>
 
         <div>
-          <label htmlFor="email" placeholder="bluebill1049@hotmail.com">
+          <label >
             Email*
-          </label>
-          <input name="email" ref={register({ required: true })} />
+          <input name="email" placeholder="Email" ref={register({ required: true })} />
           {errors.email && (
             <p>Looks like there was an error: {errors.email.type}</p>
           )}
+           </label>
         </div>
         <div>
           <label htmlFor="message">Message</label>
-          <textarea name="message" ref={register({ required: false })} />
+          <textarea name="message" placeholder="Message" ref={register({ required: false })} />
         </div>
         {data && (
           <pre style={{ textAlign: "left", color: "white" }}>
