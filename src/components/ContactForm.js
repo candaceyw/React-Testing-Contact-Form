@@ -10,6 +10,8 @@ const ContactForm = () => {
     setData(data);
   };
 
+
+
   return (
     <div className="App">
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -18,7 +20,7 @@ const ContactForm = () => {
           <input
             name="firstName"
             placeholder="First Name"
-            ref={register({ required: true, maxLength: 3 })}
+            ref={register({ required: true, maxLength: 20 })}
           />
           {errors.firstName && (
             <p>Looks like there was an error: {errors.firstName.type}</p>
@@ -42,15 +44,28 @@ const ContactForm = () => {
         <div>
           <label >
             Email*
-          <input name="email" placeholder="Email" ref={register({ required: true })} />
+          <input name="email" placeholder="Email" ref={register({ required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} />
           {errors.email && (
             <p>Looks like there was an error: {errors.email.type}</p>
           )}
            </label>
         </div>
+
+        <label>Your prefer pronoun*
+        <select name="pronoun" ref={register({ required: true })} >
+        <option value="select" defaultValue disabled>select option</option>
+        <option value="he/him">he/him</option>
+        <option value="she/her">she/her</option>
+        <option value="they/them">they/them</option>
+
+      </select>
+      </label>
+
+
         <div>
-          <label htmlFor="message">Message</label>
+          <label>Message
           <textarea name="message" placeholder="Message" ref={register({ required: false })} />
+          </label>
         </div>
         {data && (
           <pre style={{ textAlign: "left", color: "white" }}>

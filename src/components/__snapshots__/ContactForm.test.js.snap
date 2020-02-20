@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm snapshot renders 1`] = `
+<div
+  className="App"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div>
+      <label>
+        First Name*
+        <input
+          name="firstName"
+          placeholder="First Name"
+        />
+      </label>
+    </div>
+    <div>
+      <label>
+        Last Name*
+        <input
+          name="lastName"
+          placeholder="Last Name"
+        />
+      </label>
+    </div>
+    <div>
+      <label>
+        Email*
+        <input
+          name="email"
+          placeholder="Email"
+        />
+      </label>
+    </div>
+    <label>
+      Your prefer pronoun*
+      <select
+        name="pronoun"
+      >
+        <option
+          defaultValue={true}
+          disabled={true}
+          value="select"
+        >
+          select option
+        </option>
+        <option
+          value="he/him"
+        >
+          he/him
+        </option>
+        <option
+          value="she/her"
+        >
+          she/her
+        </option>
+        <option
+          value="they/them"
+        >
+          they/them
+        </option>
+      </select>
+    </label>
+    <div>
+      <label>
+        Message
+        <textarea
+          name="message"
+          placeholder="Message"
+        />
+      </label>
+    </div>
+    <input
+      type="submit"
+    />
+  </form>
+</div>
+`;
