@@ -12,7 +12,9 @@ exports[`ContactForm snapshot renders 1`] = `
         First Name*
         <input
           name="firstName"
+          onChange={[Function]}
           placeholder="First Name"
+          value=""
         />
       </label>
     </div>
@@ -21,7 +23,9 @@ exports[`ContactForm snapshot renders 1`] = `
         Last Name*
         <input
           name="lastName"
+          onChange={[Function]}
           placeholder="Last Name"
+          value=""
         />
       </label>
     </div>
@@ -30,7 +34,9 @@ exports[`ContactForm snapshot renders 1`] = `
         Email*
         <input
           name="email"
+          onChange={[Function]}
           placeholder="Email"
+          value=""
         />
       </label>
     </div>
@@ -38,6 +44,8 @@ exports[`ContactForm snapshot renders 1`] = `
       Your prefer pronoun*
       <select
         name="pronoun"
+        onChange={[Function]}
+        value=""
       >
         <option
           defaultValue={true}
@@ -68,10 +76,28 @@ exports[`ContactForm snapshot renders 1`] = `
         Message
         <textarea
           name="message"
+          onChange={[Function]}
           placeholder="Message"
+          value=""
         />
       </label>
     </div>
+    <pre
+      style={
+        Object {
+          "color": "white",
+          "textAlign": "left",
+        }
+      }
+    >
+      {
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "pronoun": "",
+  "message": ""
+}
+    </pre>
     <input
       type="submit"
     />

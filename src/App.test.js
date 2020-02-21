@@ -7,22 +7,22 @@ test("renders App without crashing", () => {
   render(<App />);
 });
 
-// test('renders test text from app', () => {
+test('renders test text from app', () => {
 
-//   //Arrange
-//   const { getByText } = render(<App />);
+  //Arrange
+  const { getByText } = render(<App />);
 
-//   //Act
-//   const header = getByText(/i am test text/i);
+  //Act
+  const header = getByText(/i am test text/i);
 
-//   //Assert
-//   expect(header).toBeInTheDocument();
-//   expect(header).toBeTruthy();
-//   expect(header).not.toBeFalsy();
+  //Assert
+  expect(header).toBeInTheDocument();
+  expect(header).toBeTruthy();
+  expect(header).not.toBeFalsy();
 
-// })
+})
 
-// test('concise test - renders test text from app', () => {
-//   const { getByText } = render(<App />);
-//   getByText(/i am test text/i);
-//  })
+test('concise test - renders test text from app', () => {
+  const { getByText } = render(<App />);
+  getByText(/i am test text/i);
+ })
